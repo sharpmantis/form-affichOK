@@ -1,4 +1,4 @@
-<form class="form">
+<form class="form" [formGroup]='recetteForm' (submit)=newRecette()>
   <div class="titre">
     <tr>
       <h2> Ma nouvelle recette</h2>
@@ -15,7 +15,11 @@
 
   </div>
   <div class="nom">
-    <input type="text" placeholder="Nom de la recette " >
+    nom <input type="text" placeholder="Nom de la recette " >
+
+  </div>
+  <div class="nbr">
+    nombre de personne <input type="number">
 
   </div>
   <div class="ingredients">
@@ -24,15 +28,15 @@
   <div class="temps">
     <div class="prepa">
     Temps de préparation 
-      <input class="time">
+      <input type="time">
     </div>
     <div class="repos">
         Temps de repos
-        <input class="time">
+        <input type="time">
     </div>
     <div class="cuiss">
         Temps de cuisson
-        <input class="time">
+        <input type="time">
     </div>
     <div class="total">
 
