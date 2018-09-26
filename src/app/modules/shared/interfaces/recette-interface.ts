@@ -10,7 +10,7 @@ export interface RecetteInterface {
 
    /* Type de la recette
     */
-   type: Types;
+   type?: Types;
 
    /* Titre du Todo
     * @var String
@@ -20,7 +20,7 @@ export interface RecetteInterface {
     * @var Time prepa
     * 
     */
-       prepa: Time;
+    prepa: Time;
 
    /* Durée de cuisson
     * @var Time cuisson
@@ -46,4 +46,6 @@ export interface RecetteInterface {
     * Instructions
     */
    instructions: String;
+
+   personne: number;
 }

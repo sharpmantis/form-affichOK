@@ -21,12 +21,14 @@ export class RecetteService {
   constructor(private _api: HttpClient) { }
 
 
-  public addRecette(recette: RecetteInterface){
+  public addRecette(Recette: RecetteInterface){
     this._api.post<any> (
       Constants._API_ROOT,
-      recette
-    )
-  } 
+      Recette
+    ).subscribe(() => {
+      console.log('well done !');
+    })
+  };
 
   
 /** 
