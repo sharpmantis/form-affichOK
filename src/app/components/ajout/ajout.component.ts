@@ -32,9 +32,9 @@ export class AjoutComponent implements OnInit {
       title : '',
       prepa : null,
       cuisson : null,
-      repos : null ,
       ingredients: [],
-      instructions: ''
+      instructions: '',
+      personne : null,
     };
 
    }
@@ -49,7 +49,8 @@ export class AjoutComponent implements OnInit {
      cuisson: [moment(this.recetteAjoutee.cuisson).format('HH:mm')],
      repos: [moment(this.recetteAjoutee.repos).format('HH:mm')],
      ingredients: [this.recetteAjoutee.ingredients],
-     instructions: [this.recetteAjoutee.instructions]
+     instructions: [this.recetteAjoutee.instructions],
+     personne: [this.recetteAjoutee.personne]
 
     }
   )

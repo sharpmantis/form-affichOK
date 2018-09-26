@@ -46,4 +46,8 @@ export interface RecetteInterface {
     * Instructions
     */
    instructions: String;
+
+
+//Le nombre de personnes
+   personne: number;
 }
