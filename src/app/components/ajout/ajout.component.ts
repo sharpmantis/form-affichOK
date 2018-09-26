@@ -43,12 +43,12 @@ export class AjoutComponent implements OnInit {
 
   this.recetteForm=this.formBuilder.group(
     {
-     types: [this.recetteAjoutee.type],
+     //types: [this.recetteAjoutee.type],
      title: [this.recetteAjoutee.title],
      prepa: [moment(this.recetteAjoutee.prepa).format('HH:mm')],
      cuisson: [moment(this.recetteAjoutee.cuisson).format('HH:mm')],
-     repos: [moment(this.recetteAjoutee.repos).format('HH:mm')],
-     ingredients: [this.recetteAjoutee.ingredients],
+     //repos: [moment(this.recetteAjoutee.repos).format('HH:mm')],
+     //ingredients: [this.recetteAjoutee.ingredients],
      instructions: [this.recetteAjoutee.instructions],
      personne: [this.recetteAjoutee.personne]
 

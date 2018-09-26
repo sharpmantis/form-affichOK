@@ -1,6 +1,7 @@
 import { Ingredient } from "./ingredient";
 import { Time } from "@angular/common";
 import { Types } from "./types";
+import { FormGroup, FormBuilder, FormControl} from '@angular/forms';
 
 export interface RecetteInterface {
     /* @var (optional)id: number

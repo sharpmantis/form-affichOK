@@ -1,53 +1,66 @@
-<form class="form"  [formGroup]='recetteForm' (submit)=newRecette()>
+<form class="form" [formGroup]='recetteForm' (submit)=newRecette()>
   <div class="titre">
     <tr>
       <h2> Ma nouvelle recette</h2>
     </tr>
   </div>
-  <div class="type">
 
+  <!--
+  <div class="type">
     <input type="checkbox" name="entree" id="entree" /> 
       <label for="entree">Entrée</label>
     <input type="checkbox" name="plat" id="plat" /> 
       <label for="plat">Plat</label>
     <input type="checkbox" name="dessert" id="dessert" /> 
       <label for="dessert">Dessert</label>   
-
   </div>
+  -->
+
   <div class="nom">
-    nom <input type="text" placeholder="Nom de la recette " >
-
+    nom <input type="text" placeholder="Nom de la recette " formControlName="title">
   </div>
+
   <div class="nbr">
-    nombre de personne <input type="number">
-
+    nombre de personne <input type="number" formControlName="personne">
   </div>
+
+  <!--
   <div class="ingredients">
-
   </div>
+  -->
+
   <div class="temps">
-    <div class="prepa">
-    Temps de préparation 
+    <div class="prepa" formControlName="prepa">
+      Temps de préparation
       <input type="time">
     </div>
+
+    <!--
     <div class="repos">
         Temps de repos
         <input type="time">
     </div>
-    <div class="cuiss">
-        Temps de cuisson
-        <input type="time">
+    -->
+
+    <div class="cuiss" formControlName="cuisson">
+      Temps de cuisson
+      <input type="time">
     </div>
     <div class="total">
 
     </div>
   </div>
+
   <div class="instruc">
-    Description <textarea autocapitalize="sentence" placeholder="recette" ></textarea>
+    Description <textarea autocapitalize="sentence" placeholder="recette" formControlName="instructions"></textarea>
   </div>
+
+  <!--
   <div class="image">
     <input type="file">
   </div>
+  -->
+
   <div>
     <button type="submit">Ajouter</button>
   </div>
