@@ -5,12 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ResultatComponent } from './components/resultat/resultat.component';
+import { AffichageComponent } from './components/affichage/affichage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AjoutComponent,
-    ResultatComponent
+    ResultatComponent,
+    AffichageComponent
   ],
   imports: [
     BrowserModule,
