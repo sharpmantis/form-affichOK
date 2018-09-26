@@ -1,10 +1,18 @@
 import { Component, OnInit, Type } from '@angular/core';
 import * as moment from 'moment';
+<<<<<<< HEAD
 import { RecetteInterface } from '../../../modules/shared/interfaces/recette-interface';
 import { Ingredient }  from '../../../modules/shared/interfaces/ingredient';
 import { Types }  from '../../../modules/shared/interfaces/types';
 import { FormGroup, FormBuilder, FormControl} from '@angular/forms';
 import {RecetteService} from '../../../modules/shared/services/recette-service';
+=======
+import { RecetteInterface } from 'src/app/modules/shared/interfaces/recette-interface'
+import { Ingredient }  from 'src/app/modules/shared/interfaces/ingredient';
+import { Types }  from 'src/app/modules/shared/interfaces/types';
+import { FormGroup, FormBuilder, FormControl} from '@angular/forms';
+import {RecetteService} from 'src/app/modules/shared/services/recette-service';
+>>>>>>> Devel
 
 @Component({
   selector: 'app-ajout',
