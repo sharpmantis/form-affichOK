@@ -10,21 +10,28 @@ import { RecetteService } from '../../modules/shared/services/recette-service';
 })
 export class AffichageComponent implements OnInit {
 
-private recetteSubscription: Subscription;
+  private demande:any;
+  
 
-public recettes: RecetteInterface[];
-
-
-
-  constructor(private recetteService: RecetteService ) {
+  public recettes : RecetteInterface[];
+  
+  constructor(private recetteService: RecetteService) {
     
-    this.recettes = [];
-   
+  }
 
-
-   }
 
   ngOnInit() {
   }
 
+  afficheRecette(){
+    this.recetteService.getRecette().subscribe((recettes) => {
+      this.recettes=recettes;
+      console.log(this.recettes.length + ' recettes en stock');
+    }
+    )
+  };
+
+
 }
+
+

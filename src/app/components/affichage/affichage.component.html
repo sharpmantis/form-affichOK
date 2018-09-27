@@ -1,5 +1,25 @@
 <p>
   affichage works!
 </p>
-<button (click)="afficherRecettes()">Liste des recetes</button>
-<tr *ngFor="let Recette of recetes; let i = index">{{ recetes }}</tr>
+<button (click)="afficheRecette()">Liste des recetes</button>
+
+<table>
+  <thead>
+    <tr>
+      <td>Nom de la recette</td>
+      <td>Nombre de personnes</td>
+      <td>tps de prepa</td>
+      <td>tps de cuisson</td>
+      <td> Instructions</td>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Recette of recettes">
+    <td>{{ Recette.titre }}</td>
+    <td>{{ Recette.nb_personnes }}</td>
+    <td>{{ Recette.temps_preparation }}</td>
+    <td>{{ Recette.temps_cuisson }}</td>
+    <td>{{ Recette.instructions }}</td>
+  <tr>
+    </tbody>
+</table>

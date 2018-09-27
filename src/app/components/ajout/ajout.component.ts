@@ -30,12 +30,12 @@ export class AjoutComponent implements OnInit {
     // Un objet de type RecetteInterface vide !
     this.recetteAjoutee = {
       //type: null,
-      title : '',
-      prepa : null,
-      cuisson : null,
+      titre : '',
+      temps_preparation : null,
+      temps_cuisson : null,
       //ingredients: [],
       instructions: '',
-      personne : null,
+      nb_personnes : null,
     };
 
    }
@@ -45,25 +45,22 @@ export class AjoutComponent implements OnInit {
   this.recetteForm=this.formBuilder.group(
     {
      //types: [this.recetteAjoutee.type],
-     title: [this.recetteAjoutee.title],
-     prepa: [this.recetteAjoutee.prepa],
-     cuisson: [this.recetteAjoutee.cuisson],
+     title: [this.recetteAjoutee.titre],
+     temps_preparation: [this.recetteAjoutee.temps_preparation],
+     temps_cuisson: [this.recetteAjoutee.temps_cuisson],
      //repos: [moment(this.recetteAjoutee.repos).format('HH:mm')],
      //ingredients: [this.recetteAjoutee.ingredients],
      instructions: [this.recetteAjoutee.instructions],
-     personne: [this.recetteAjoutee.personne]
+     nb_personnes: [this.recetteAjoutee.nb_personnes]
     }
   )
   }
 
+  
+
   public newRecette() :void {
     // Appeler le service avec l'objet issu du formulaire
-      const Recette: RecetteInterface = this.recetteForm.value;
-     
+      const Recette: RecetteInterface = this.recetteForm.value;     
       this.recetteService.addRecette(Recette);
-     
-     
-    
   }
-
 }

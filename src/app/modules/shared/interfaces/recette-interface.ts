@@ -15,18 +15,18 @@ export interface RecetteInterface {
    /* Titre du Todo
     * @var String
     */
-   title: String;
+   titre: String;
    /*Durée de préparation
     * @var Time prepa
     * 
     */
-    prepa: Time;
+    temps_preparation: number;
 
    /* Durée de cuisson
     * @var Time cuisson
     * 
     */
-   cuisson?: Time;
+   temps_cuisson?: number;
 
    /* Durée de repos de la recette
     * @var Time repos
@@ -47,5 +47,5 @@ export interface RecetteInterface {
     */
    instructions: String;
 
-   personne: number;
+   nb_personnes: number;
 }
